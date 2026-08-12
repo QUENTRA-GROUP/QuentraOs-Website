@@ -13,8 +13,8 @@
             </ul>
             <div class="nav-actions">
                 <button @click="toggleTheme" class="btn-theme-toggle" aria-label="Toggle Theme">
-                    <span v-if="isLightMode">&#9789;</span> <!-- Moon icon for switching back to dark -->
-                    <span v-else>&#9728;</span> <!-- Sun icon for switching to light -->
+                    <span class="icon-dark">&#9789;</span> <!-- Moon icon -->
+                    <span class="icon-light">&#9728;</span> <!-- Sun icon -->
                 </button>
                 <button class="btn-nav">Download</button>
             </div>
@@ -23,26 +23,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 
-const isLightMode = ref(false)
+const themeCookie = useCookie('quentraos-theme', { 
+    default: () => 'system',
+    maxAge: 31536000, // 1 year
+    path: '/'
+})
 
 const toggleTheme = () => {
-    isLightMode.value = !isLightMode.value
-    const theme = isLightMode.value ? 'light' : 'dark'
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('quentraos-theme', theme)
+    const isCurrentlyLight = document.documentElement.getAttribute('data-theme') === 'light'
+    const newTheme = isCurrentlyLight ? 'dark' : 'light'
+    themeCookie.value = newTheme
+    document.documentElement.setAttribute('data-theme', newTheme)
 }
 
 onMounted(() => {
-    // Check local storage for theme preference
-    const savedTheme = localStorage.getItem('quentraos-theme')
-    if (savedTheme === 'light') {
-        isLightMode.value = true
-        document.documentElement.setAttribute('data-theme', 'light')
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark')
-    }
+    // If cookie is 'system', just sync the cookie but the script in head already handled DOM
 })
 </script>
 
@@ -65,6 +62,14 @@ onMounted(() => {
     justify-content: center;
     padding: 0.5rem;
 }
+
+/* Default (Dark Mode): Show sun to switch to light */
+.icon-dark { display: none; }
+.icon-light { display: inline; }
+
+/* Light Mode: Show moon to switch to dark */
+:global([data-theme='light']) .icon-light { display: none; }
+:global([data-theme='light']) .icon-dark { display: inline; }
 
 .btn-theme-toggle:hover {
     color: var(--accent-orange);
