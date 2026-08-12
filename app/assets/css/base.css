@@ -24,7 +24,7 @@ body {
 h1, h2, h3, h4 {
     color: var(--text-white);
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 900 !important;
     letter-spacing: -0.02em;
     line-height: 1;
 }
