@@ -24,10 +24,10 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const roles = ["Hackers", "Security specialists", "Developers", "Sysadmins", "Network engineers"]
-const typedText = ref("")
+const typedText = ref(roles[0] || "")
 
 let roleIndex = 0
-let charIndex = 0
+let charIndex = (roles[0] || "").length
 let isDeleting = false
 let timeoutId: number | null = null
 
