@@ -34,14 +34,6 @@ let timeoutId: number | null = null
 const typeEffect = () => {
     const currentRole = roles[roleIndex] || ""
     
-    if (isDeleting) {
-        typedText.value = currentRole.substring(0, charIndex - 1)
-        charIndex--
-    } else {
-        typedText.value = currentRole.substring(0, charIndex + 1)
-        charIndex++
-    }
-
     let typeSpeed = isDeleting ? 50 : 120
 
     if (!isDeleting && charIndex === currentRole.length) {
@@ -52,6 +44,14 @@ const typeEffect = () => {
         isDeleting = false
         roleIndex = (roleIndex + 1) % roles.length
         typeSpeed = 500
+    } 
+    else {
+        if (isDeleting) {
+            charIndex--
+        } else {
+            charIndex++
+        }
+        typedText.value = currentRole.substring(0, charIndex)
     }
 
     timeoutId = window.setTimeout(typeEffect, typeSpeed)

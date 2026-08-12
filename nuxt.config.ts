@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     'nuxt-lucide-icons',
-    '@nuxtjs/tailwindcss',
     '@nuxt/devtools',
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
