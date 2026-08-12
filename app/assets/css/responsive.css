@@ -1,0 +1,65 @@
+/* Responsive */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 968px) {
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.2rem); }
+    .hero-pre { font-size: 1.5rem; }
+    .cursor { height: 0.85em; width: 8px; }
+    .hero-content { max-width: 100%; }
+    .hero-bg { width: 100%; opacity: 0.3; mask-image: none; }
+    .typing-container { white-space: normal; height: 2.6em; }
+    
+    .why-grid, .editions-grid { grid-template-columns: 1fr; }
+    .pwnbox-container { flex-direction: column; padding-right: 2rem; gap: 2rem; }
+    .pwnbox-image { width: 100%; height: 300px; border-left: none; border-top: 1px solid var(--accent-orange); }
+    .stats-container { grid-template-columns: 1fr; }
+    .involved-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+    .nav-container { padding: 1rem 1.5rem; }
+    
+    .hero { padding-top: 100px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-pre { font-size: 1.2rem; }
+    .typing-container { height: 2.8em; }
+    
+    .section { padding: 4rem 0; }
+    .section-title { font-size: 2.2rem; }
+    
+    .features-grid { grid-template-columns: 1fr; }
+    .feature-item[style*="span 2"] { grid-column: span 1 !important; }
+    
+    .pwnbox-section h2 { font-size: 2.5rem; }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .container { padding: 0 1rem; }
+    .nav-container { padding: 1rem; }
+    
+    .hero h1 { font-size: 1.8rem; }
+    .hero-pre { font-size: 1rem; }
+    .hero p { font-size: 0.95rem; }
+    
+    .btn-group { flex-direction: column; gap: 1rem; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; text-align: center; padding: 1rem; }
+    
+    .stat-box h2 { font-size: 3.5rem; }
+    
+    .edition-card { padding: 2rem; }
+    .edition-title { font-size: 1.8rem; }
+    .btn-card { width: 100%; text-align: center; }
+    
+    .pwnbox-container { padding-right: 1rem; }
+    .pwnbox-section h2 { font-size: 2rem; }
+    
+    .involved-card { padding: 1.5rem; }
+}

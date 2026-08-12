@@ -1,0 +1,11 @@
+:root {
+    --bg-black: #050505;
+    --bg-dark: #0d0d0f;
+    --bg-gray: #141418;
+    --accent-orange: #ff5e00;
+    --accent-orange-glow: rgba(255, 94, 0, 0.6);
+    --accent-silver: #c0c0c0;
+    --text-white: #f0f0f0;
+    --text-gray: #8a8a8e;
+    --border-color: #2a2a2e;
+}
