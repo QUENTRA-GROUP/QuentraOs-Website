@@ -406,3 +406,24 @@
     font-size: 0.85rem;
     line-height: 1.5;
 }
+
+/* Light Mode Overrides for Images & Overlays */
+[data-theme='light'] .hero-bg {
+    filter: grayscale(80%) contrast(110%) brightness(90%) blur(1px);
+    opacity: 0.6;
+}
+
+[data-theme='light'] .stats-overlay {
+    filter: grayscale(80%) contrast(110%) brightness(90%);
+    opacity: 0.15;
+}
+
+[data-theme='light'] .pwnbox-image {
+    filter: grayscale(80%) contrast(110%) brightness(95%);
+}
+
+
+
+[data-theme='light'] nav {
+    background: rgba(255, 255, 255, 0.85);
+}
