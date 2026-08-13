@@ -128,10 +128,14 @@ const initCanvasAnimation = () => {
             ctx.beginPath()
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
             ctx.fillStyle = '#ff5e00'
-            ctx.shadowBlur = 10
+            // Only particles have a slight glow, lines will be sharp
+            ctx.shadowBlur = 5
             ctx.shadowColor = '#ff5e00'
             ctx.fill()
         }
+
+        // Reset shadow so lines are sharp
+        ctx.shadowBlur = 0;
 
         // Draw Connecting Lines
         for (let i = 0; i < particles.length; i++) {
