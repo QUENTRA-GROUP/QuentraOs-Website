@@ -9,6 +9,7 @@
     --text-white: #f0f0f0;
     --text-gray: #8a8a8e;
     --border-color: #2a2a2e;
+    --overlay-bg: rgba(5, 5, 5, 0.95);
 }
 
 [data-theme='light'] {
@@ -22,4 +23,5 @@
     --text-white: #101010;
     --text-gray: #5a5a5e;
     --border-color: #dcdcdc;
+    --overlay-bg: rgba(255, 255, 255, 0.95);
 }

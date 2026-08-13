@@ -292,12 +292,12 @@ onMounted(() => {
     right: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(5, 5, 5, 0.95);
+    background: var(--overlay-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 999;
     transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s ease;
     overflow-y: auto;
 }
 
