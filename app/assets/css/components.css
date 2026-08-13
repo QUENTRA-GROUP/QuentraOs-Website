@@ -315,7 +315,7 @@
 
 .pwnbox-container {
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
     gap: 4rem;
     padding-right: 0; /* Keeps the image flush to the right if desired, but left padding remains 2rem to align with logo */
 }
@@ -325,8 +325,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-self: stretch; /* Stretch to match the height of the image */
-    padding-top: 2rem; /* Give it some breathing room at the top */
 }
 
 .htb-logo-wrapper {
