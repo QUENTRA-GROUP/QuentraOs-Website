@@ -44,8 +44,12 @@
     .section-title { font-size: 1.8rem; margin-bottom: 2rem; }
     
     .features-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .feature-item { padding: 1.5rem; }
+    .feature-title { font-size: 1.05rem; }
+    .feature-desc { font-size: 0.85rem; }
     .feature-item[style*="span 2"] { grid-column: span 1 !important; }
     
+    .why-text p { font-size: 0.95rem; }
     .why-grid, .editions-grid { gap: 1.5rem; }
     .edition-card { padding: 1.5rem; }
     .edition-title { font-size: 1.5rem; }
@@ -78,7 +82,12 @@
     .section { padding: 2rem 0; }
     .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
     
+    .why-text p { font-size: 0.85rem; margin-bottom: 1rem; }
     .features-grid, .why-grid, .editions-grid, .involved-grid { gap: 1rem; }
+    
+    .feature-item { padding: 1rem; }
+    .feature-title { font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .feature-desc { font-size: 0.8rem; line-height: 1.4; }
     
     .stat-box h2 { font-size: 2rem; }
     .stat-box p { font-size: 0.8rem; }
