@@ -16,6 +16,7 @@
     .involved-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .nav-links { display: none; }
+    .mobile-menu-btn { display: inline-block; }
 }
 
 /* Mobile Devices */
