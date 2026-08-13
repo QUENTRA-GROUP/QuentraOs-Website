@@ -362,15 +362,6 @@
     color: var(--accent-orange);
 }
 
-.partner-text {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    color: var(--text-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-family: 'JetBrains Mono', monospace;
-}
-
 /* Get Involved Section */
 .involved-grid {
     display: grid;
