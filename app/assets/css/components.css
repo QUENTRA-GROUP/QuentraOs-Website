@@ -315,7 +315,7 @@
 
 .pwnbox-container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 4rem;
     padding-right: 0; /* Keeps the image flush to the right if desired, but left padding remains 2rem to align with logo */
 }
@@ -328,6 +328,10 @@
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: var(--text-white);
+}
+
+.pwnbox-lead:last-child {
+    margin-bottom: 0;
 }
 
 .pwnbox-image {
