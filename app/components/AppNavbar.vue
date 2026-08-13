@@ -41,6 +41,7 @@
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" :class="{ 'is-open': isMobileMenuOpen }">
             <div class="mobile-menu-content">
+                <a href="#" class="logo mobile-logo" @click="toggleMobileMenu">QUENTRA<span>OS</span></a>
                 <ul class="mobile-nav-links">
                     <li><a href="#documentation" @click="toggleMobileMenu">Documentation</a></li>
                     <li><a href="#community" @click="toggleMobileMenu">Community</a></li>
@@ -377,12 +378,37 @@ onMounted(() => {
     color: var(--accent-orange);
 }
 
+.mobile-logo {
+    position: absolute;
+    top: 1.2rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-white);
+    letter-spacing: -0.05em;
+    text-decoration: none;
+}
+
 @media (max-width: 968px) {
     .mobile-menu-btn {
         display: inline-block;
     }
     .nav-actions .btn-nav {
         display: none; /* Hide download button in top navbar on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-logo {
+        top: 1rem;
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-logo {
+        top: 1rem;
+        left: 1rem;
     }
 }
 </style>
