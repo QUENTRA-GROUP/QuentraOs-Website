@@ -55,11 +55,17 @@ onMounted(() => {
     position: relative;
 }
 
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .dropdown-toggle span {
     font-size: 0.8em;
-    margin-left: 4px;
     display: inline-block;
     transition: transform 0.3s ease;
+    transform-origin: center;
 }
 
 .dropdown:hover .dropdown-toggle span {
