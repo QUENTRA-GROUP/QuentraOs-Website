@@ -3,6 +3,7 @@
         <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">VERSION RELEASE // V1.0.0</div>
                 <h1>
                     <span class="hero-pre">The operating system for</span>
                     <!-- Area untuk Animasi Mengetik -->
