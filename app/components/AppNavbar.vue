@@ -461,12 +461,15 @@ onMounted(() => {
     display: inline-block;
 }
 
+@media (max-width: 1200px) {
+    .nav-actions .btn-nav {
+        display: none; /* Hide download button early to make room for nav links */
+    }
+}
+
 @media (max-width: 968px) {
     .mobile-menu-btn {
         display: inline-block;
-    }
-    .nav-actions .btn-nav {
-        display: none; /* Hide download button in top navbar on mobile */
     }
 }
 

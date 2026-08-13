@@ -1,5 +1,14 @@
 /* Responsive */
 
+/* Small Desktop & Tablet Landscape */
+@media (max-width: 1200px) {
+    .nav-container { padding: 1rem; }
+    .nav-links { gap: 0.8rem; }
+    .nav-links a, .dropdown-toggle { font-size: 0.75rem; letter-spacing: 0; white-space: nowrap; }
+    .nav-actions { gap: 0.8rem; }
+    .logo { font-size: 1.2rem; }
+}
+
 /* Tablet & Smaller Laptops */
 @media (max-width: 968px) {
     .hero h1 { font-size: clamp(2.2rem, 4vw, 3rem); }
