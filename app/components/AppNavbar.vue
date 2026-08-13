@@ -333,6 +333,8 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 
 .mobile-nav-links > li > a,
@@ -373,7 +375,8 @@ onMounted(() => {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, margin-top 0.4s ease;
-    margin-left: 1rem;
+    margin: 0 0 0 1rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -416,11 +419,17 @@ onMounted(() => {
     .mobile-menu-header {
         padding: 1rem 1.5rem;
     }
+    .mobile-menu-content {
+        padding: 2rem 1.5rem 4rem;
+    }
 }
 
 @media (max-width: 480px) {
     .mobile-menu-header {
         padding: 1rem;
+    }
+    .mobile-menu-content {
+        padding: 2rem 1rem 4rem;
     }
 }
 </style>
