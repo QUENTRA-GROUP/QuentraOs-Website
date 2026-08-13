@@ -9,12 +9,12 @@
                 <div class="edition-card">
                     <h3 class="edition-title">Home Edition</h3>
                     <p class="edition-desc">Home edition is designed for daily use, privacy and software development. QuentraOs Tools can be manually installed to assemble a custom and lightweight pentesting environment.</p>
-                    <a href="#" class="btn-card">Download Home</a>
+                    <a href="#" class="btn-card">Download</a>
                 </div>
                 <div class="edition-card security">
                     <h3 class="edition-title">Security Edition</h3>
                     <p class="edition-desc">Security Edition is a special purpose operating system designed for Penetration Testing and Red Team operations. It contains a full arsenal of ready-to-use pentesting tools.</p>
-                    <a href="#" class="btn-card">Download Security</a>
+                    <a href="#" class="btn-card">Download</a>
                 </div>
             </div>
         </div>
