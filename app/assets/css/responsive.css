@@ -50,9 +50,12 @@
     .feature-item[style*="span 2"] { grid-column: span 1 !important; }
     
     .why-text p { font-size: 0.95rem; }
-    .why-grid, .editions-grid { gap: 1.5rem; }
+    .why-grid, .editions-grid { gap: 1rem; }
+    
+    .section-header p { font-size: 0.9rem; }
     .edition-card { padding: 1.5rem; }
-    .edition-title { font-size: 1.5rem; }
+    .edition-title { font-size: 1.3rem; }
+    .edition-desc { font-size: 0.85rem; }
     
     .pwnbox-section h2 { font-size: 2rem; }
     .pwnbox-container { padding-right: 0; padding: 1.5rem; gap: 1.5rem; }
@@ -97,9 +100,12 @@
     .stat-box p { font-size: 0.8rem; }
     .stats-container { gap: 1.5rem; }
     
-    .edition-card { padding: 1.2rem; }
-    .edition-title { font-size: 1.3rem; }
-    .btn-card { width: 100%; text-align: center; padding: 0.8rem; font-size: 0.9rem; }
+    .section-header p { font-size: 0.85rem; }
+    
+    .edition-card { padding: 1rem; }
+    .edition-title { font-size: 1.1rem; margin-bottom: 0.8rem; }
+    .edition-desc { font-size: 0.8rem; margin-bottom: 1.2rem; }
+    .btn-card { width: 100%; text-align: center; padding: 0.6rem; font-size: 0.85rem; }
     
     .pwnbox-container { padding: 1.2rem; gap: 1.2rem; }
     .pwnbox-section h2 { font-size: 1.6rem; }
