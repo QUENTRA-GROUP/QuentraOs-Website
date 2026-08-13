@@ -109,7 +109,8 @@
     .edition-desc { font-size: 0.8rem; margin-bottom: 1.2rem; }
     .btn-card { width: 100%; text-align: center; padding: 0.6rem; font-size: 0.85rem; }
     
-    .pwnbox-container { padding: 1.2rem; gap: 1.2rem; }
+    .pwnbox-container { padding: 1.2rem; gap: 1.2rem; align-items: flex-start; }
+    .pwnbox-content { padding-top: 0; gap: 1rem; }
     .pwnbox-section h2 { font-size: 1.6rem; }
     .pwnbox-lead { font-size: 0.9rem; margin-bottom: 1rem; }
     .pwnbox-content p { font-size: 0.85rem; }
