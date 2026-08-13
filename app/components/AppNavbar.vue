@@ -480,6 +480,9 @@ onMounted(() => {
     .mobile-menu-content {
         padding: 2rem 1.5rem 4rem;
     }
+    .nav-actions {
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -488,6 +491,12 @@ onMounted(() => {
     }
     .mobile-menu-content {
         padding: 2rem 1rem 4rem;
+    }
+    .nav-actions {
+        gap: 0.25rem;
+    }
+    .btn-theme-toggle, .btn-lang-toggle, .mobile-menu-btn {
+        padding: 0.25rem;
     }
 }
 </style>
