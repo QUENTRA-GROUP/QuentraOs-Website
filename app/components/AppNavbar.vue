@@ -16,7 +16,13 @@
                 </li>
                 <li><a href="#tools">Tools</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#support-us">Support Us</a></li>
+                <li class="dropdown">
+                    <a href="#support-us" class="dropdown-toggle">Support Us <span>&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#store">Store</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="nav-actions">
                 <button @click="toggleTheme" class="btn-theme-toggle" aria-label="Toggle Theme">
