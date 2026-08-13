@@ -242,6 +242,7 @@ onMounted(() => {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    position: relative;
     z-index: 1001; /* Above overlay */
 }
 
@@ -316,6 +317,9 @@ onMounted(() => {
     background: var(--bg-black);
     z-index: 10;
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mobile-menu-content {
