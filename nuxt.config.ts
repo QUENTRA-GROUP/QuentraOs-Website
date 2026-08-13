@@ -10,5 +10,17 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/i18n'
-  ]
+  ],
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English' },
+      { code: 'id', name: 'Indonesia' },
+      { code: 'zh', name: '中文' },
+      { code: 'ru', name: 'Русский' },
+      { code: 'ja', name: '日本語' },
+      { code: 'ar', name: 'العربية' }
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default'
+  }
 })

@@ -25,6 +25,18 @@
                 </li>
             </ul>
             <div class="nav-actions">
+                <div class="lang-selector dropdown">
+                    <button class="btn-lang-toggle dropdown-toggle" aria-label="Select Language">
+                        <LucideGlobe :size="20" />
+                    </button>
+                    <ul class="dropdown-menu lang-menu">
+                        <li v-for="locale in locales" :key="typeof locale === 'string' ? locale : locale.code">
+                            <NuxtLink :to="switchLocalePath(typeof locale === 'string' ? locale : locale.code)">
+                                {{ typeof locale === 'string' ? locale : locale.name }}
+                            </NuxtLink>
+                        </li>
+                    </ul>
+                </div>
                 <button @click="toggleTheme" class="btn-theme-toggle" aria-label="Toggle Theme">
                     <span class="icon-dark">&#9789;</span> <!-- Moon icon -->
                     <span class="icon-light">&#9728;</span> <!-- Sun icon -->
@@ -80,6 +92,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
+
+const { locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 const themeCookie = useCookie('quentraos-theme', { 
     default: () => 'system',
@@ -236,6 +251,47 @@ onMounted(() => {
 }
 
 /* Mobile Menu Button (Hidden by default) */
+.mobile-menu-btn, .mobile-close-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Language Selector Styles */
+.lang-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.btn-lang-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.btn-lang-toggle:hover {
+    color: var(--accent-orange);
+}
+
+.lang-menu {
+    right: 0;
+    left: auto;
+    min-width: 140px;
+}
+.lang-menu li a {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+}
+
 .mobile-menu-btn {
     display: none;
     background: transparent;
