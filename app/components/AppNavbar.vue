@@ -40,8 +40,10 @@
 
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" :class="{ 'is-open': isMobileMenuOpen }">
-            <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
                 <a href="#" class="logo mobile-logo" @click="toggleMobileMenu">QUENTRA<span>OS</span></a>
+            </div>
+            <div class="mobile-menu-content">
                 <ul class="mobile-nav-links">
                     <li><a href="#documentation" @click="toggleMobileMenu">Documentation</a></li>
                     <li><a href="#community" @click="toggleMobileMenu">Community</a></li>
@@ -306,8 +308,18 @@ onMounted(() => {
     transform: translateX(0);
 }
 
+.mobile-menu-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: var(--bg-black);
+    z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .mobile-menu-content {
-    padding: 100px 2rem 4rem; /* Space for navbar */
+    padding: 2rem 2rem 4rem; /* Adjusted padding since header takes space */
     display: flex;
     flex-direction: column;
 }
@@ -379,14 +391,12 @@ onMounted(() => {
 }
 
 .mobile-logo {
-    position: absolute;
-    top: 1.2rem;
-    left: 2rem;
     font-size: 1.5rem;
     font-weight: 900;
     color: var(--text-white);
     letter-spacing: -0.05em;
     text-decoration: none;
+    display: inline-block;
 }
 
 @media (max-width: 968px) {
@@ -399,16 +409,14 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
-    .mobile-logo {
-        top: 1rem;
-        left: 1.5rem;
+    .mobile-menu-header {
+        padding: 1rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .mobile-logo {
-        top: 1rem;
-        left: 1rem;
+    .mobile-menu-header {
+        padding: 1rem;
     }
 }
 </style>
