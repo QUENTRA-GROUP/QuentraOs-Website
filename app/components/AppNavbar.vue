@@ -6,7 +6,14 @@
                 <li><a href="#documentation">Documentation</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#how-it-works">How it works</a></li>
-                <li><a href="#team">Team</a></li>
+                <li class="dropdown">
+                    <a href="#team" class="dropdown-toggle">Team <span>&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#partner">Partner</a></li>
+                        <li><a href="#corsairs">Corsairs</a></li>
+                    </ul>
+                </li>
                 <li><a href="#tools">Tools</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#support-us">Support Us</a></li>
@@ -44,6 +51,76 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle span {
+    font-size: 0.8em;
+    margin-left: 4px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle span {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    margin-top: 2.5rem; /* Push down completely below navbar */
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    border-radius: 4px;
+}
+
+/* Invisible bridge to prevent hover loss when moving mouse down */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    right: 0;
+    height: 2.5rem;
+    background: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: var(--text-white);
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    color: var(--accent-orange);
+    background: rgba(255, 94, 0, 0.05);
+    padding-left: 1.8rem;
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
