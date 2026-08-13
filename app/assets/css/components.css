@@ -385,10 +385,16 @@
     background: var(--bg-gray);
 }
 
+.involved-icon-wrapper {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
 .involved-icon {
     font-size: 1.5rem;
     color: var(--accent-orange);
-    margin-bottom: 1.5rem;
     display: block;
 }
 
