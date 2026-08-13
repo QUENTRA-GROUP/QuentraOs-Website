@@ -324,6 +324,12 @@
     flex: 1;
 }
 
+.pwnbox-lead {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-white);
+}
+
 .pwnbox-image {
     flex: 1;
     height: 500px;
