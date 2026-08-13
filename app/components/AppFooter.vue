@@ -35,8 +35,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&#169; 2024 QUENTRAOS LINUX. ALL_RIGHTS_RESERVED.</p>
-                <p>BUILT_WITH_INTENSITY // V4.0.1</p>
+                <p>&#169; 2024 QUENTRA GROUP. ALL_RIGHTS_RESERVED.</p>
+                <p>VERSION RELEASE // V1.0.0</p>
             </div>
         </div>
     </footer>
