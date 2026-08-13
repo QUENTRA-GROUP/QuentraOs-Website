@@ -324,6 +324,29 @@
     flex: 1;
 }
 
+.htb-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.htb-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.htb-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-white);
+    letter-spacing: 0.1em;
+}
+
+.htb-text span {
+    font-weight: 400;
+}
+
 .pwnbox-lead {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
