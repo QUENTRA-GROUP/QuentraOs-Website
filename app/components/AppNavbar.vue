@@ -38,8 +38,8 @@
                     </ul>
                 </div>
                 <button @click="toggleTheme" class="btn-theme-toggle" aria-label="Toggle Theme">
-                    <span class="icon-dark">&#9789;</span> <!-- Moon icon -->
-                    <span class="icon-light">&#9728;</span> <!-- Sun icon -->
+                    <span class="icon-dark"><LucideMoon :size="20" /></span> <!-- Moon icon -->
+                    <span class="icon-light"><LucideSun :size="20" /></span> <!-- Sun icon -->
                 </button>
                 <button class="btn-nav">Download</button>
                 <button class="mobile-menu-btn" @click="toggleMobileMenu" aria-label="Toggle Menu">
@@ -228,10 +228,9 @@ onMounted(() => {
 .btn-theme-toggle {
     background: transparent;
     border: none;
-    color: var(--text-white);
-    font-size: 1.2rem;
+    color: var(--text-color);
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
