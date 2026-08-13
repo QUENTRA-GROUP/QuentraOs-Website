@@ -50,8 +50,9 @@ const initMatrixAnimation = () => {
     }
 
     const draw = () => {
-        // Semi-transparent black to create trailing effect
-        ctx.fillStyle = 'rgba(5, 5, 5, 0.1)'
+        const isLightMode = document.documentElement.getAttribute('data-theme') === 'light'
+        // Semi-transparent background to create trailing effect, matching theme
+        ctx.fillStyle = isLightMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(5, 5, 5, 0.1)'
         ctx.fillRect(0, 0, width, height)
 
         ctx.fillStyle = '#ff5e00' // QuentraOS Orange
