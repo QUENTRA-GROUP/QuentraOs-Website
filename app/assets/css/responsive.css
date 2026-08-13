@@ -27,6 +27,7 @@
     .hero { padding-top: 100px; }
     .hero h1 { font-size: 2.2rem; }
     .hero-pre { font-size: 1.2rem; }
+    .hero-bg { display: none; } /* Hide hero image on mobile */
     .typing-container { height: 2.8em; }
     
     .section { padding: 4rem 0; }
