@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/i18n'
   ]
 })
